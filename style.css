@@ -1,0 +1,127 @@
+html {
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#content {
+    margin: 5% auto;
+}
+
+h1 {
+    font-weight: bolder;
+    text-align: center;
+    font-variant: small-caps;
+    font-size: 3rem;
+}
+
+.form {
+    width: 100%;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+    padding-bottom: 4px;
+}
+
+.form input {
+    width: 100%;
+    height: 100%;
+    color: #595f6e;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+}
+
+#btn {
+    padding-top: 2%;
+
+}
+
+.form label {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+}
+
+.form label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #5fa8d3;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+.content-name {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.form input:focus .label-name .content-name,
+.form input:valid+.label-name .content-name {
+    transform: translateY(-65%);
+    font-size: 14px;
+    color: #5fa8d3;
+}
+
+.form input:focus+.label-name::after,
+.form input:valid+.label-name::after {
+    transform: translateX(0%);
+}
+
+#restartGame {
+    margin-left: 20px;
+}
+
+button {
+    background: none;
+    border: 2px solid #00008b;
+    font: inherit;
+    line-height: 1;
+    padding: 1em 2em;
+}
+
+button {
+    color: #00008b;
+    transition: 0.25s;
+}
+
+button:hover,
+button:focus {
+    border-color: #5fa8d3;
+    color: #fff;
+}
+
+
+#flip,
+#restartGame {
+    box-shadow:
+        0.3em 0.3em 0 0 #5fa8d3,
+        inset 0.3em 0.3em 0 0 #5fa8d3;
+}
+
+#flip:hover,
+#flip:focus,
+#restartGame:hover,
+#restartGame:focus {
+    box-shadow:
+        0 0 0 0 #5fa8d3,
+        inset 6em 3.5em 0 0 rgba(0, 0, 54.5, .60);
+}
+
+#result {
+    padding-top: 25px;
+}

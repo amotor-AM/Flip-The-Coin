@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Coin Flip</title>
+    <meta name="description" content="Coin Flip" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="code.js"></script>
+    <script>
+      var bleep = new Audio();
+      bleep.src = "bleep.wav";
+      </script>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="content">
+    <h1>Coin Flip</h1>
+    
+    <h3>How many times would you like to flip the coin?</h3>
+    
+    <div id="submit">
+      <div class="form">
+      <input type="number" id="name" autocomplete="off" required />
+        <label for="name" class="label-name">
+          <span class="content-name">Number</span>
+            
+          </label>
+      </div>
+      <div id="btn">
+    <button id="flip" onmousedown="bleep.play()">Flip Coin</button>
+    <button type="button" id="restartGame">Restart</button>
+      </div>
+    </div>
+    
+    <div id="result"></div>
+        <div id="heads"></div>
+        <div id="tails"></div>
+    </div>
+      </div>
+    </div>
